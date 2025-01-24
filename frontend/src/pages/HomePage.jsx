@@ -77,16 +77,14 @@ const HomePage = () => {
         </div>
       ) : (
         <>
-          <div
-            className="relative flex justify-end"
-            onClick={() => navigate("/cart")}
-          >
+          <div className="relative flex justify-end">
             <svg
               className="w-8 h-8 text-gray-500 cursor-pointer"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              onClick={() => navigate("/cart")}
             >
               <path
                 strokeLinecap="round"

@@ -154,7 +154,7 @@ const BillsPage = () => {
 
       {/* Modal */}
       {isModalOpen && selectedBill && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center  flex-col">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-5 flex-col">
           <div
             className="bg-white rounded-lg shadow-lg w-96 p-6"
             ref={modalRef}
