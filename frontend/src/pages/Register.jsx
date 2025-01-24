@@ -40,7 +40,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://pos-invoice.onrender.com/api/auth/register",
         formData
       );
       if (response.status === 200 || response.status === 201) {

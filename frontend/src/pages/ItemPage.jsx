@@ -26,7 +26,7 @@ const ItemPage = () => {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/items/get-item"
+        "https://pos-invoice.onrender.com/api/items/get-item"
       );
       setItemsData(data);
     } catch (error) {
@@ -50,7 +50,10 @@ const ItemPage = () => {
       // Add item
 
       try {
-        await axios.post("http://localhost:5000/api/items/add-item", formData);
+        await axios.post(
+          "https://pos-invoice.onrender.com/api/items/add-item",
+          formData
+        );
         toast.success("Item added successfully!");
       } catch (error) {
         console.error("Error adding item:", error);
@@ -60,7 +63,7 @@ const ItemPage = () => {
       // Update item
       try {
         await axios.put(
-          `http://localhost:5000/api/items/update-item/${currentItem._id}`,
+          `https://pos-invoice.onrender.com/api/items/update-item/${currentItem._id}`,
           formData
         );
         toast.success("Item updated successfully!");
@@ -93,7 +96,9 @@ const ItemPage = () => {
   const handleDelete = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:5000/api/items/delete-item/${id}`);
+      await axios.delete(
+        `https://pos-invoice.onrender.com/api/items/delete-item/${id}`
+      );
       getAllItems();
       toast.success("Item deleted successfully!");
     } catch (error) {

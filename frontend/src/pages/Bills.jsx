@@ -19,7 +19,7 @@ const BillsPage = () => {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/bills/get-bills"
+        "https://pos-invoice.onrender.com/api/bills/get-bills"
       );
       setBillsData(data);
     } catch (error) {

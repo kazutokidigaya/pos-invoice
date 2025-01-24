@@ -78,7 +78,7 @@ const CheckoutPage = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/bills/add-bills",
+        "https://pos-invoice.onrender.com/api/bills/add-bills",
         formData
       );
 

@@ -6,6 +6,7 @@ import connectDb from "./config/db.js";
 import itemRoutes from "./routes/itemRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import billRoutes from "./routes/billsRoute.js";
+import axios from "axios";
 
 dotenv.config();
 
